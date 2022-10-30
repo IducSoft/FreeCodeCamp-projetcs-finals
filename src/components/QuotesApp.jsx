@@ -28,15 +28,15 @@ const QuotesApp = () => {
 
     // Funcion que se ejecuta con el evento onMouseEnter
 
-    const changeColor=(e)=>{
+    // const changeColor=()=>{
 
-        setStateColor({
-            // Aqui tenemos que convertir el dato de entero a character
-            red: getRandomIntInclusive().toString(),
-            green: getRandomIntInclusive().toString(),
-            blue: getRandomIntInclusive().toString(),
-        })
-    }
+    //     setStateColor({
+    //         // Aqui tenemos que convertir el dato de entero a character
+    //         red: getRandomIntInclusive().toString(),
+    //         green: getRandomIntInclusive().toString(),
+    //         blue: getRandomIntInclusive().toString(),
+    //     })
+    // }
 
     const getQuote=()=>{
 
@@ -51,7 +51,13 @@ const QuotesApp = () => {
 
                 
                 setQuoteActual(response.data)
-                changeColor()
+                
+                setStateColor({
+                    // Aqui tenemos que convertir el dato de entero a character
+                    red: getRandomIntInclusive().toString(),
+                    green: getRandomIntInclusive().toString(),
+                    blue: getRandomIntInclusive().toString(),
+                })
                 
             })
             .catch((error)=>{
@@ -68,7 +74,13 @@ const QuotesApp = () => {
 
                 
                 setQuoteActual(response.data)
-                changeColor()
+                
+                setStateColor({
+                    // Aqui tenemos que convertir el dato de entero a character
+                    red: getRandomIntInclusive().toString(),
+                    green: getRandomIntInclusive().toString(),
+                    blue: getRandomIntInclusive().toString(),
+                })
                 
             })
             .catch((error)=>{
@@ -76,8 +88,6 @@ const QuotesApp = () => {
                 console.log(error)
             })
     }
-
-    console.log(quoteActual)
   return (
 
 
@@ -90,7 +100,7 @@ const QuotesApp = () => {
                         Chuck Norris Jokes
                     </span>
 
-                    <a id='tweet-quote' href={`https://twitter.com/intent/tweet/?hashtags=${quoteActual.value}-CN-Joke`} target="_blank">
+                    <a rel="noreferrer" id='tweet-quote' href={`https://twitter.com/intent/tweet/?hashtags=${quoteActual.value}-CN-Joke`} target="_blank">
                         Tweet
                     </a>
 
