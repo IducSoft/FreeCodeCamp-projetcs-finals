@@ -22,12 +22,12 @@ function App() {
 function Home() {
   return (
     <>
-      <main className='mt-5 pt-5'>
+      <main className='mt-5 pt-5 text-center'>
         <h2>Welcome to the homepage!</h2>
         <p>You can do this, I believe in you.</p>
         
       </main>
-      <nav>
+      <nav className=' text-center'>
         <Link to="/about">About</Link>
       </nav>
     </>
