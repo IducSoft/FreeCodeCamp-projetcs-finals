@@ -1,0 +1,126 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.App{
+
+  transition: all .3s ease-in-out;
+}
+
+
+/* Machine Quotes styles */
+
+.link-navbar-component{
+
+  text-decoration: none;
+  margin-right: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.image-navLink{
+
+  width: 40px;
+  margin-right: 15px;
+
+}
+
+.quote-box-container{
+
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: auto;
+}
+
+.quote-box{
+
+  min-width: 250px;
+  max-width: 1000px;
+  margin: 2rem;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+  background-color: white;
+}
+
+.buttons-group{
+
+  display: flex;
+  flex-direction: end;
+  width: 100%;
+}
+
+
+/* Drum styles */
+
+
+.drum-machine{
+
+  width: 100%;
+  min-height: 100vh;
+  max-height: auto;
+  background-color: #f5c0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+.display-drum{
+
+  
+  min-width: 250px;
+  max-width: 700px;
+  border: 3px solid greenyellow;
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+}
+
+.grid-buttons{
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
