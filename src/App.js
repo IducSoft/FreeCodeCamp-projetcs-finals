@@ -27,9 +27,7 @@ function Home() {
         <p>You can do this, I believe in you.</p>
         
       </main>
-      <nav className=' text-center'>
-        <Link to="/about">About</Link>
-      </nav>
+      
     </>
   );
 }
