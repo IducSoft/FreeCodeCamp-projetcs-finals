@@ -8,6 +8,7 @@ import HomeImage from "../Images/stay-at-home.png"
 import QuoteImage from "../Images/citas.png"
 import MarkDown from "../Images/survey.png"
 import DrumMachine from "../Images/drum-kit.png"
+import Calculator from "../Images/calculate.png"
 
 function NavBar() {
   return (
@@ -55,6 +56,13 @@ function NavBar() {
                     <Link to="/drum" className='link-navbar-component'>
                         <img src={DrumMachine} alt="Home_image" className='image-navLink'/>
                         Drum Machine
+                    </Link>
+                  </Nav.Link>
+
+                  <Nav.Link>
+                    <Link to="/calculator" className='link-navbar-component'>
+                        <img src={Calculator} alt="Home_image" className='image-navLink'/>
+                        Calculator
                     </Link>
                   </Nav.Link>
                   

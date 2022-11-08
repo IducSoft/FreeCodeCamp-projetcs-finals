@@ -4,6 +4,8 @@ import NavBar from './components/NavBar';
 import QuotesApp from './components/QuotesApp';
 import MarkDownPreviewer from './components/MarkDownPreviewer';
 import DrumMachine from './components/DrumMachine';
+import Calculator from './components/Calculator';
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <Route exact path="/quote" element={<QuotesApp/>} />
       <Route exact path="/markdown" element={<MarkDownPreviewer/>} />
       <Route exact path="/drum" element={<DrumMachine/>} />
+      <Route exact path="/calculator" element={<Calculator/>} />
     </Routes>
   </div>
   );

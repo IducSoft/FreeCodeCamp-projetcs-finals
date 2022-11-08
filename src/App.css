@@ -1,41 +1,3 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 
 .App{
 
@@ -185,3 +147,130 @@
 }
 
 
+/* Add styles to caculator project */
+
+.calculator-container{
+
+  width: 100vw;
+  min-height: 100vh;
+  max-width: auto;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+.calculator-box{
+
+  min-width: 250px;
+  height: 500px;
+
+  background-color: white;
+  box-shadow: 3px 4px 0px 0px rgb(0 0 0 / 75%);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+
+@media screen and (min-width:300px) {
+  
+  .calculator-box{
+
+    min-width: 300px;
+  }
+}
+
+@media screen and (min-width:450px) {
+  
+  .calculator-box{
+
+    min-width: 400px;
+  }
+}
+
+@media screen and (min-width:750px) {
+  
+  .calculator-box{
+
+    min-width: 600px;
+  }
+}
+
+.formula-screen{
+
+  
+  min-height: 20px;
+  font-family: digital;
+  font-size: 20px;
+  color: orange;
+  text-align: right;
+  vertical-align: text-top;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  background-color: black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+.output-screen{
+
+  font-size: 29px;
+  font-family: digital;
+  color: white;
+  text-align: right;
+  line-height: 35px;
+  background-color: black;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+
+
+.numbers-and-operations{
+  margin-top: 10px;
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+
+.clear{
+
+  grid-column: 1 / 3;
+  border-top-left-radius: 10px;
+}
+
+#multiply{
+
+  border-top-right-radius: 10px;
+}
+
+#zero{
+
+  grid-column: 1 / 3;
+  border-bottom-left-radius: 10px;
+}
+
+#equals{
+
+  grid-row: 4 / 6;
+  grid-column: 4 / 5;
+  border-bottom-right-radius: 10px;
+}
