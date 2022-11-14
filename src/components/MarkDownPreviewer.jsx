@@ -27,7 +27,7 @@ const MarkDownPreviewer = () => {
 
     // Styles
     const inputStyle = {
-        width: "400px",
+        width: "300px",
         height: "50vh",
         marginLeft: "auto",
         marginRight: "auto",

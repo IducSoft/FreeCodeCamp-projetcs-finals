@@ -143,16 +143,6 @@ const DrumMachine = () => {
     audio.play();
   }
 
-  
-
-  
-
-
-  
-  
-
-  
-
 
 
 
@@ -221,7 +211,7 @@ const DrumMachine = () => {
               </div>
 
               
-              <div id='display' className='my-3 text-center'>
+              <div id='display-drum' className='my-3 text-center'>
                 {/* <span>  {valueRanche}     </span> */}
                 <span>{state.currentSongText}</span>
               </div>
