@@ -49,6 +49,7 @@ const Calculator = () => {
                 <button id='two' onClick={(e)=>addNumber("2")} value={"2"} style={{background: "rgb(102, 102, 102)"}}> 2 </button>
                 <button id='three' onClick={(e)=>addNumber("3")} value={"3"} style={{background: "rgb(102, 102, 102)"}}> 3 </button>
                 <button id='zero'  onClick={(e)=>addNumber("0")} value={"0"} style={{background: "rgb(102, 102, 102)"}}> 0 </button>
+                <button id='negative'  onClick={(e)=>addNumber("negative")} value={"-1"} style={{background: "rgb(102, 102, 102)"}}> -1 </button>
                 <button id='decimal' value={"."} style={{background: "rgb(102, 102, 102)"}}> . </button>
                 <button id='equals' value={"="} style={{background: "rgb(0, 68, 102)"}}> = </button>
             </div>

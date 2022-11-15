@@ -4,7 +4,8 @@ import NavBar from './components/NavBar';
 import QuotesApp from './components/QuotesApp';
 import MarkDownPreviewer from './components/MarkDownPreviewer';
 import DrumMachine from './components/DrumMachine';
-import Calculator from './components/Calculator';
+// import Calculator from './components/Calculator';
+import Calculator from './components/CalculatorOther';
 
 
 function App() {
