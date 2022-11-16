@@ -274,3 +274,88 @@
   grid-column: 4 / 5;
   border-bottom-right-radius: 10px;
 }
+
+
+/* Pomodoro styles */
+
+.clock-container{
+
+  width: 100%;
+  min-height: 100vh;
+  max-height: auto;
+  background-color: rgb(209, 141, 209);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+}
+
+
+
+
+.pomodoro{
+
+  width: 600px;
+  height: 500px;
+  border: 4px solid black;
+  border-radius: 20px;
+  background-color: white;
+  padding: .5rem 1rem;
+}
+
+@media screen and (max-width:380px) {
+  
+  .pomodoro{
+
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:680px) {
+  
+  .pomodoro{
+
+    width: 500px;
+  }
+}
+
+.arrows{
+
+  width: 1.5rem;
+}
+
+.rotated-180{
+
+  transform: rotate(3.142rad);
+}
+
+.controls-container{
+
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 400px) {
+  
+
+  .controls-container{
+
+    display: block;
+  }
+}
+
+.butoons{
+
+  border: 1px solid black;
+}
+
+#timer-wrapper{
+
+  border: 4px solid black;
+  border-radius: 20px;
+  background-color: white;
+  padding: .5rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  width: 200px;
+}

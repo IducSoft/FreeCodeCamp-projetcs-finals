@@ -6,6 +6,7 @@ import MarkDownPreviewer from './components/MarkDownPreviewer';
 import DrumMachine from './components/DrumMachine';
 // import Calculator from './components/Calculator';
 import Calculator from './components/CalculatorOther';
+import ClockTimerPomodoro from './components/ClockTimerPomodoro';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route exact path="/markdown" element={<MarkDownPreviewer/>} />
       <Route exact path="/drum" element={<DrumMachine/>} />
       <Route exact path="/calculator" element={<Calculator/>} />
+      <Route exact path="/pomodoro" element={<ClockTimerPomodoro/>} />
     </Routes>
   </div>
   );

@@ -9,6 +9,7 @@ import QuoteImage from "../Images/citas.png"
 import MarkDown from "../Images/survey.png"
 import DrumMachine from "../Images/drum-kit.png"
 import Calculator from "../Images/calculate.png"
+import Pomodoro from "../Images/tecnica-pomodoro.png"
 
 function NavBar() {
   return (
@@ -63,6 +64,13 @@ function NavBar() {
                     <Link to="/calculator" className='link-navbar-component'>
                         <img src={Calculator} alt="Home_image" className='image-navLink'/>
                         Calculator
+                    </Link>
+                  </Nav.Link>
+
+                  <Nav.Link>
+                    <Link to="/pomodoro" className='link-navbar-component'>
+                        <img src={Pomodoro} alt="Home_image" className='image-navLink'/>
+                        Pomodoro
                     </Link>
                   </Nav.Link>
                   
