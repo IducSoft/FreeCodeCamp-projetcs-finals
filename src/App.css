@@ -329,7 +329,7 @@
   transform: rotate(3.142rad);
 }
 
-.controls-container{
+.controls-container-pomodoro{
 
   display: flex;
   justify-content: space-between;
@@ -338,7 +338,7 @@
 @media screen and (max-width: 400px) {
   
 
-  .controls-container{
+  .controls-container-pomodoro{
 
     display: block;
   }
