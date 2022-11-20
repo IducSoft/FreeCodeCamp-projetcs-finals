@@ -37,6 +37,7 @@ const ClockTimerPomodoro = () => {
         setSessionTime(25);
 
         setPlay(false);
+        setStarting(false);
     }
 
     const start =()=> {
