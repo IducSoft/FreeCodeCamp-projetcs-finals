@@ -4,14 +4,46 @@ import arrows from "../Images/arrow-to-top.png";
 const ClockTimerPomodoro = () => {
 
     const [breakTime, setBreakTime] = useState(5);
-    const [sessionTime, setSessionTime] = useState(25);
+    const [breakSecondTime, setBreakSecondTime] = useState(0);
+    const [breakStartingTime, setBreakStartingTime] = useState(false);
+    
 
     const [starting,setStarting] = useState(false);
     const [play,setPlay] = useState(false);
 
 
-    // const [minutesSession] = useState(breakTime);
-    // const [secondsSession] = useState(59);
+    
+    
+    const [sessionTime, setSessionTime] = useState(25);
+    const [secondsSession, setSecondsSession] = useState(0);
+
+    
+
+    const establecerSession=(minutes, second)=>{
+
+        let min = minutes,
+            sec = second;
+        
+        
+
+            if(second <=60){
+
+                sec --;
+            }
+
+        if(second === 0){
+
+            min--;
+            sec = 59;
+        }
+        
+
+        return{
+
+            minutos:min,
+            segundos:sec
+        }
+    }
 
     useEffect(() => {
         
@@ -19,22 +51,52 @@ const ClockTimerPomodoro = () => {
             
             if(play === true){
                 console.log("iterando")
-                let session = sessionTime;
-                if(!(session <= 1)){
-                    setSessionTime(sessionTime - 1);
+                
+                if(sessionTime === 0 && secondsSession === 0){
+
+                    setPlay(false);
+                    setBreakStartingTime(true);
+                    return
                 }
+
+                let {minutos, segundos} = establecerSession(sessionTime, secondsSession);
+
+                setSessionTime(minutos);
+                setSecondsSession(segundos);
             }
+
+            if(breakStartingTime === true){
+
+                if(breakTime === 0 && breakSecondTime === 0){
+
+                    // setPlay(true);
+                    // setBreakStartingTime(false);
+                    // setSessionTime(copySessionTime);
+                    resetTime()
+                    return
+                }
+
+                let {minutos, segundos} = establecerSession(breakTime, breakSecondTime);
+                setBreakSecondTime(segundos);
+                setBreakTime(minutos)
+            }
+
+
+
         }, 1000);
         
         return () => {
         clearInterval(interval);
         }
-    }, [breakTime, sessionTime, play])
+    }, [breakTime, breakSecondTime, sessionTime, play, secondsSession, breakStartingTime])
 
     const resetTime=()=>{
 
         setBreakTime(5);
+        setBreakSecondTime(0)
         setSessionTime(25);
+        setSecondsSession(0);
+        setBreakStartingTime(false)
 
         setPlay(false);
         setStarting(false);
@@ -46,12 +108,14 @@ const ClockTimerPomodoro = () => {
 
             setPlay(!play);
             setStarting(true)
+            breakStartingTime(true)
         }
     }
 
     const pauseFunc = () => {
         setPlay(false);
         setStarting(false);
+        breakStartingTime(false)
         
     }
 
@@ -164,11 +228,23 @@ const ClockTimerPomodoro = () => {
             </div>
             </div>
 
-            <div id='timer-wrapper' className='mx-auto'>
+            {breakStartingTime === false ? (
+
+                <div id='timer-wrapper' className='mx-auto'>
                 <h1 id="timer-label">Session</h1>
 
-                <h2 id="time-left">{sessionTime} : 00</h2>
-            </div>
+                <h2 id="time-left">{sessionTime} :  {secondsSession === 0 ? "00" : secondsSession}</h2>
+                </div>
+            ) :(
+
+                <div id='timer-wrapper' className='mx-auto'>
+                <h1 id="timer-label">Break</h1>
+
+                <h2 id="time-left">{breakTime} :  {breakSecondTime === 0 ? "00" : breakSecondTime}</h2>
+                </div>
+            )}
+
+            
 
 
             <div className='time-controls text-center'>
