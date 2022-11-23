@@ -9,6 +9,7 @@ import Calculator from './components/CalculatorOther';
 import ClockTimerPomodoro from './components/ClockTimerPomodoro';
 import video from "./Images/pexels-cup-of-couple-8473762.mp4";
 import { Link } from "react-router-dom";
+import Footer from './components/Footer';
 // import { useMemo } from 'react';
 
 
@@ -25,14 +26,12 @@ function App() {
       <Route exact path="/calculator" element={<Calculator/>} />
       <Route exact path="/pomodoro" element={<ClockTimerPomodoro/>} />
     </Routes>
+    <Footer/>
   </div>
   );
 }
 
 function Home() {
-
-  
-
   const VideComponente =()=>{
 
     return(
